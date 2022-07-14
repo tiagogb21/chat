@@ -5,6 +5,8 @@ import Cookies from "universal-cookie";
 
 import { ChanellListContainer, ChanellContainer } from "../components";
 
+import "../App.css";
+
 const client = StreamChat.getInstance(process.env.API_KEY);
 
 export default function Home() {
