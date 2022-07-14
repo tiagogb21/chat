@@ -6,7 +6,6 @@ function App() {
     <>
       <header></header>
       <Home />
-      <h3>asd</h3>
       <footer></footer>
     </>
   );

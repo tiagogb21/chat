@@ -1,0 +1,34 @@
+import React from "react";
+
+export default function AddChannel({
+  setCreateType,
+  setIsCreating,
+  setIsEditing,
+  setToggleContainer,
+  type,
+}) {
+  const handleClick = () => {
+    setCreateType(type);
+    setIsCreating((prevState) => !prevState);
+    setIsEditing(false);
+    return setToggleContainer
+      ? setToggleContainer((prevState) => !prevState)
+      : null;
+  };
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000.svg"
+      onClick={() => handleClick()}
+    >
+      <path
+        d="M7 0C3.13438 0 0 3.13438 0 7C0 10.8656 3.13438 14 7 14C10,8656 14 14 10.8656 14 7C14"
+        fill="white"
+        fillOpacity="0.66"
+      />
+    </svg>
+  );
+}
